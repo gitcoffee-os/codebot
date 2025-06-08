@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="gitcoffee-codebot:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/gitcoffee_codebot_jar</output-path>
+    <root id="archive" name="gitcoffee-codebot.jar" />
+  </artifact>
+</component>

@@ -1,0 +1,74 @@
+<!--
+   Copyright (c) 2025-2099 GitCoffee All Rights Reserved.
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.exmay.gitcoffee.codebot.gitcoffee-codebot</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>CodeBot 代码生成助手</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="gitcoffee@exmay.com" url="https://codebot.exmay.com/">GitCoffee</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description><![CDATA[
+        <div><h1 align="center" style="margin:30px 0 30px;font-weight:bold;">CodeBot Code Generation Assistant v1.0.0</h1><h4 align="center"> A multi-data source, multi-language, multi-template, and multi-project code generation productivity tool. <br>Support multiple data sources, multiple languages, multiple templates, and multiple projects, and generate multi-terminal code with one click. </h4><h4 align="center"> 🌟 Core features<br />🛢️ Multiple data sources | 📂 Multitemplate | 📦 Multi-project | 💻 Multilingual, multiterminal | 📚 Supports multiple versions | 🧩 High scalability | ✨ AI | 💡 Ecology </h4><p align="center"><img alt="logo" src="https://cdn.exmay.com/exmay/exmay-app/static/images/codebot_logo.png" width="150" height="150"></p><h1 align="center" style="margin:30px 0 30px;font-weight:bold;">CodeBot 代码生成助手 v1.0.0</h1><h4 align="center"> 一款多数据源、多语言、多模板、多项目代码生成生产力工具。<br>支持多种数据源、多种语言、多种模板、多种项目，一键生成多端代码。 </h4><p align="center"><a href="https://github.com/gitcoffee-os/codebot/blob/main/LICENSE" style="display:inline-block;"><img src="https://img.shields.io/github/license/gitcoffee-os/codebot.png?labelColor=ffeb3b&amp;color=d81e06"></a></p><p align="center"> 正在持续迭代中... </p><h2 id="codebot-代码生成助手-介绍" tabindex="-1">CodeBot 代码生成助手 介绍 <a class="header-anchor" href="#codebot-代码生成助手-介绍" aria-label="Permalink to &quot;CodeBot 代码生成助手 介绍&quot;">​</a></h2><img src="https://codebot.exmay.com/docs/images/codebot_homepage.png" alt="codebot-homepage" width="360"/><br><img src="https://codebot.exmay.com/docs/images/codebot_homepage_dark.png" alt="codebot-homepage" width="360"/><h2 id="🌟-核心特性" tabindex="-1">🌟 核心特性 <a class="header-anchor" href="#🌟-核心特性" aria-label="Permalink to &quot;🌟 核心特性&quot;">​</a></h2><h3 id="🛢️-多数据源" tabindex="-1">🛢️ 多数据源 <a class="header-anchor" href="#🛢️-多数据源" aria-label="Permalink to &quot;🛢️ 多数据源&quot;">​</a></h3><ul><li>支持 MySQL、Oracle、SQLServer、PostgreSQL 等多种数据源。</li><li>支持在线管理数据源。</li></ul><h3 id="📂-多模板" tabindex="-1">📂 多模板 <a class="header-anchor" href="#📂-多模板" aria-label="Permalink to &quot;📂 多模板&quot;">​</a></h3><ul><li>支持Freemarker、Thymeleaf 、Velocity、Beetl 等多种模板引擎生成代码。</li><li>支持在线管理模板引擎模板文件及模板代码。</li></ul><h3 id="📦-多项目" tabindex="-1">📦 多项目 <a class="header-anchor" href="#📦-多项目" aria-label="Permalink to &quot;📦 多项目&quot;">​</a></h3><ul><li>同一数据源及配置，支持根据不同代码模板生成不同项目代码。</li></ul><h3 id="💻-多语言、多端" tabindex="-1">💻 多语言、多端 <a class="header-anchor" href="#💻-多语言、多端" aria-label="Permalink to &quot;💻 多语言、多端&quot;">​</a></h3><ul><li>支持生成多种语言（Java、PHP、Python、Go、Ruby、C#、C++、JavaScript等）、前端、后端、多应用端代码。</li></ul><h3 id="📚-支持多版本" tabindex="-1">📚 支持多版本 <a class="header-anchor" href="#📚-支持多版本" aria-label="Permalink to &quot;📚 支持多版本&quot;">​</a></h3><ul><li>同一项目支持多种版本模板。</li><li>支持在线管理不同版本模板文件及模板代码。</li></ul><h3 id="🧩-高扩展性" tabindex="-1">🧩 高扩展性 <a class="header-anchor" href="#🧩-高扩展性" aria-label="Permalink to &quot;🧩 高扩展性&quot;">​</a></h3><ul><li>支持数据源导入、模板文件及模板代码导入、支持与各类项目集成，易扩展、具备高扩展性。</li></ul><h3 id="✨-ai" tabindex="-1">✨ AI <a class="header-anchor" href="#✨-ai" aria-label="Permalink to &quot;✨ AI&quot;">​</a></h3><ul><li>可扩展集成 AI，代码生成及流程更智能。</li></ul><h3 id="💡-生态" tabindex="-1">💡 生态 <a class="header-anchor" href="#💡-生态" aria-label="Permalink to &quot;💡 生态&quot;">​</a></h3><ul><li>提供内容创作者效率提升、开发者业务集成生态支持。</li></ul><h2 id="🌟-core-features" tabindex="-1">🌟 Core features <a class="header-anchor" href="#🌟-core-features" aria-label="Permalink to &quot;🌟 Core features&quot;">​</a></h2><h3 id="🛢️-multiple-data-sources" tabindex="-1">🛢️ Multiple data sources <a class="header-anchor" href="#🛢️-multiple-data-sources" aria-label="Permalink to &quot;🛢️ Multiple data sources&quot;">​</a></h3><ul><li>Supports multiple data sources such as MySQL, Oracle, SQLServer, PostgreSQL, etc.</li><li>Support online management of data sources.</li></ul><h3 id="📂-multitemplate" tabindex="-1">📂 Multitemplate <a class="header-anchor" href="#📂-multitemplate" aria-label="Permalink to &quot;📂 Multitemplate&quot;">​</a></h3><ul><li>Supports code generation with multiple template engines such as Freemarker, Thymeleaf, Velocity, and Beetl.</li><li>Support online management of template engine template files and template codes.</li></ul><h3 id="📦-multi-project" tabindex="-1">📦 Multi-project <a class="header-anchor" href="#📦-multi-project" aria-label="Permalink to &quot;📦 Multi-project&quot;">​</a></h3><ul><li>With the same data source and configuration, it supports generating different project codes based on different code templates.</li></ul><h3 id="💻-multilingual-multiterminal" tabindex="-1">💻 Multilingual, multiterminal <a class="header-anchor" href="#💻-multilingual-multiterminal" aria-label="Permalink to &quot;💻 Multilingual, multiterminal&quot;">​</a></h3><ul><li>Supports generating code in multiple languages (Java, PHP, Python, Go, Ruby, C#, C++, JavaScript, etc.), front-end, back-end, and multi-application ends.</li></ul><h3 id="📚-supports-multiple-versions" tabindex="-1">📚 Supports multiple versions <a class="header-anchor" href="#📚-supports-multiple-versions" aria-label="Permalink to &quot;📚 Supports multiple versions&quot;">​</a></h3><ul><li>The same project supports multiple version templates.</li><li>Support online management of different versions of template files and template codes.</li></ul><h3 id="🧩-high-scalability" tabindex="-1">🧩 High scalability <a class="header-anchor" href="#🧩-high-scalability" aria-label="Permalink to &quot;🧩 High scalability&quot;">​</a></h3><ul><li>Supports data source import, template file and template code import, supports integration with various projects, is easy to expand and has high scalability.</li></ul><h3 id="✨-ai-1" tabindex="-1">✨ AI <a class="header-anchor" href="#✨-ai-1" aria-label="Permalink to &quot;✨ AI&quot;">​</a></h3><ul><li>Scalable integration of AI makes code generation and processes smarter.</li></ul><h3 id="💡-ecology" tabindex="-1">💡 Ecology <a class="header-anchor" href="#💡-ecology" aria-label="Permalink to &quot;💡 Ecology&quot;">​</a></h3><ul><li>Provide support for enhancing the efficiency of content creators and integrating the business ecosystem of developers.</li></ul><h2 id="👀-试用体验" tabindex="-1">👀 试用体验 <a class="header-anchor" href="#👀-试用体验" aria-label="Permalink to &quot;👀 试用体验&quot;">​</a></h2><ul><li><a href="https://codebot.cloud.exmay.com/" target="_blank" rel="noreferrer">CodeBot 代码生成助手 云端体验</a></li></ul><h2 id="📚-技术文档" tabindex="-1">📚 技术文档 <a class="header-anchor" href="#📚-技术文档" aria-label="Permalink to &quot;📚 技术文档&quot;">​</a></h2><ul><li><a href="https://codebot.exmay.com/docs" target="_blank" rel="noreferrer">官网文档</a></li><li><a href="https://codebot.exmay.com/docs/README" target="_blank" rel="noreferrer">用户指南</a></li><li><a href="https://codebot.exmay.com/docs/quickstart" target="_blank" rel="noreferrer">快速开始</a></li></ul><h2 id="💻-代码托管" tabindex="-1">💻 代码托管 <a class="header-anchor" href="#💻-代码托管" aria-label="Permalink to &quot;💻 代码托管&quot;">​</a></h2><ul><li>GitHub：<a href="https://github.com/gitcoffee-os/codebot" target="_blank" rel="noreferrer">https://github.com/gitcoffee-os/codebot</a></li><li>Gitee：<a href="https://gitee.com/gitcoffee-os/codebot" target="_blank" rel="noreferrer">https://gitee.com/gitcoffee-os/codebot</a></li></ul><h2 id="🙌-贡献指南" tabindex="-1">🙌 贡献指南 <a class="header-anchor" href="#🙌-贡献指南" aria-label="Permalink to &quot;🙌 贡献指南&quot;">​</a></h2><p>CodeBot 只有通过开源协作才能蓬勃发展。秉持这一精神,我们欢迎来自社区的各种贡献。如果您有意参与其中,请查阅我们的 <a href="https://codebot.exmay.com/docs/contributing" target="_blank" rel="noreferrer">贡献者指南</a> 。</p><h2 id="🤝-商务合作" tabindex="-1">🤝 商务合作 <a class="header-anchor" href="#🤝-商务合作" aria-label="Permalink to &quot;🤝 商务合作&quot;">​</a></h2><ul><li><a href="https://codebot.exmay.com/docs/partner" target="_blank" rel="noreferrer">合作咨询</a></li></ul><h2 id="👥-加入社区" tabindex="-1">👥 加入社区 <a class="header-anchor" href="#👥-加入社区" aria-label="Permalink to &quot;👥 加入社区&quot;">​</a></h2><p>CodeBot 代码生成助手 微信 交流群：</p><img src="https://codebot.exmay.com/docs/images/gitcoffee_wechat.jpg" width="230" title="CodeBot 代码生成助手 微信群"><p>(扫码添加微信，备注：CodeBot，邀您加入群聊)</p><h2 id="🌍-开源生态" tabindex="-1">🌍 开源生态 <a class="header-anchor" href="#🌍-开源生态" aria-label="Permalink to &quot;🌍 开源生态&quot;">​</a></h2><p><a href="https://codebot.exmay.com/docs/opensource" target="_blank" rel="noreferrer">开源生态</a></p></div>
+    ]]></description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+
+    </extensions>
+
+    <actions>
+        <action id="CodebotGenerateCodeAction" class="com.exmay.gitcoffee.codebot.generator.CodebotGenerateCodeAction"
+                text="CodeBot 代码生成助手"
+                description="CodeBot 代码生成助手"
+                icon="icons/codebot_logo.svg">
+            <add-to-group group-id="BasicEditorPopupMenu" anchor="last"/>
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+            <add-to-group group-id="CodeMenu" anchor="last"/>
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+            <add-to-group group-id="ProjectViewToolbar" anchor="last"/>
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+<!--            <add-to-group group-id="DatabaseViewPopupMenu" anchor="last"/>-->
+<!--            <add-to-group group-id="MainToolbar" anchor="last"/>-->
+<!--            <add-to-group group-id="EditorToolbar" anchor="last"/>-->
+<!--            <add-to-group group-id="MainToolbarRight" relative-to-action="SearchEverywhere" anchor="before"/>-->
+<!--            <add-to-group group-id="MainToolbarRight" relative-to-action="NewUiRunWidget" anchor="after" />-->
+            <add-to-group group-id="RightToolbarSideGroup" anchor="last"/>
+            <add-to-group group-id="NavBarToolBarOthers" anchor="last"/>
+            <add-to-group group-id="MainToolBarSettings" anchor="last"/>
+<!--            <add-to-group group-id="StatusBarRight" anchor="last" />-->
+<!--            <add-to-group group-id="InlineCompletion" anchor="first"/>-->
+            <add-to-group group-id="ConsoleEditorPopupMenu" />
+<!--            <add-to-group group-id="ViewMenu" anchor="before" relative-to-action="EditorToggleShowLineNumbers"/>-->
+<!--            <add-to-group group-id="DatabaseViewPopupMenu" anchor="after" relative-to-action="DatabaseView.DebugRoutine"/>-->
+            <!-- 可通过 ctrl + H 快捷键触发 -->
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl H"/>
+        </action>
+    </actions>
+
+</idea-plugin>
